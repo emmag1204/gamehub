@@ -1,4 +1,4 @@
-# edible-recipes
+# gamehub
 
 ###### Emma Alfaro
 ###### Vincent Nguyen
