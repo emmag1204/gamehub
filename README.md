@@ -1,2 +1,4 @@
 # gamehub
-GameHub
+
+###### Emma Alfaro
+###### Vincent Nguyen

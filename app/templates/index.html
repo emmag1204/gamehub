@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Games</title>
+</head>
+<body>
+    <h1>Games List</h1>
+    <ul>
+        {% for game in games %}
+            <li>{{ game.title }} - {{ game.genre }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Add a new game</h2>
+    <form action="{{ url_for('routes.add_game') }}" method="post">
+        <input type="text" name="title" placeholder="Game title" required>
+        <input type="text" name="genre" placeholder="Genre" required>
+        <input type="date" name="release_date">
+        <button type="submit">Add Game</button>
+    </form>
+</body>
+</html>
