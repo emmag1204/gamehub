@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}Sections{% endblock %}
+
+{% block content %}
+<section class="section-list">
+    <h2>Game Sections</h2>
+    <div class="section-grid">
+        {% for section in sections %}
+            <div class="section-card">
+                <img src="{{ url_for('static', filename='images/' + section.image) }}" alt="{{ section.name }} image">
+                <h3>{{ section.name }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games in {{ section_name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Games in {{ section_name }}</h1>
+        <a href="{{ url_for('main.home') }}">Back to Sections</a>
+    </header>
+    <main>
+        <section class="game-list">
+            <div class="game-grid">
+                {% for game in games %}
+                    <div class="game-card">
+                        <img src="{{ url_for('static', filename='images/' + game.image) }}" alt="{{ game.name }}">
+                        <h3>{{ game.name }}</h3>
+                        <p>{{ game.description }}</p>
+                        <p>Platform: {{ game.platform }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>
