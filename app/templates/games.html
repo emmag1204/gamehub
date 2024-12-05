@@ -9,10 +9,12 @@
 <body>
     <header>
         <h1>Games in {{ section_name }}</h1>
-        <a href="{{ url_for('main.home') }}">Back to Sections</a>
     </header>
     <main>
         <section class="game-list">
+            <div class="section-header">
+                <a href="{{ url_for('main.home') }}">Back to Sections</a>
+            </div>
             <div class="game-grid">
                 {% for game in games %}
                     <div class="game-card">

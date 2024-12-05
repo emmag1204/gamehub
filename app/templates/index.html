@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Hub - Welcome</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to Game Hub</h1>
-        <p>Choose a section to explore games:</p>
-        <a href="{{ url_for('main.add_game_page') }}" class="add-game-button">Add New Game</a> 
+        <h1>Welcome to Game Hub!</h1>
     </header>
     <main>
         <section class="section-list">
+            <div class="section-header">
+                <p>Choose a section to explore games:</p>
+                <a href="{{ url_for('main.add_game_page') }}" class="add-game-button">Add New Game</a> 
+            </div>
             <div class="section-grid">
                 {% for section in sections %}
                     <div class="section-card">

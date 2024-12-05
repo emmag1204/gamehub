@@ -9,13 +9,18 @@
 <body>
     <header>
         <h1>Add New Game</h1>
-        <a href="{{ url_for('main.home') }}">Back to Sections</a>
+        <a href="{{ url_for('main.home') }}" class="back-button">Back to Sections</a>
     </header>
     <main>
-        <form action="{{ url_for('main.add_game') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url_for('main.add_game') }}" method="POST" enctype="multipart/form-data" class="add-game-form">
             <div>
                 <label for="section">Section:</label>
-                <input type="text" name="section" id="section" required>
+                <select name="section" id="section" required>
+                    <option value="">Select a section</option>
+                    {% for section in sections %}
+                        <option value="{{ section.name }}">{{ section.name }}</option>
+                    {% endfor %}
+                </select>
             </div>
             <div>
                 <label for="name">Game Name:</label>
@@ -30,7 +35,7 @@
                 <input type="text" name="platform" id="platform" required>
             </div>
             <div>
-                <label for="image">Image:</label>
+                <label for="image">Upload Image:</label>
                 <input type="file" name="image" id="image" accept="image/*" required>
             </div>
             <button type="submit">Add Game</button>

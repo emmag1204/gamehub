@@ -5,26 +5,37 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 header {
-    background-color: #0E4385;
+    background-color: #4a0769;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
-}
-
-header nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
 }
 
 main {
     padding: 2rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 1rem; 
+}
+
+.section-header p{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.section-header a {
+   margin-bottom: 2rem;
+   font-size: 1rem;
 }
 
 .section-grid, .game-grid {
@@ -42,15 +53,19 @@ main {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+    color: #000000
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff0000
+}
 img {
     width: 100%;
     height: auto;
     display: block;
-}
-
-h2 {
-    color: #0E4385;
-    margin-bottom: 1rem;
 }
 
 h3 {
@@ -62,8 +77,7 @@ p {
 }
 
 .add-game-button {
-    float: right; 
-    background-color: #0E4385; 
+    background-color: #09890d; 
     color: white; 
     padding: 10px 15px; 
     text-decoration: none; 
@@ -72,5 +86,6 @@ p {
 }
 
 .add-game-button:hover {
-    background-color: #0B3065; 
-} 
+    background-color: #585858; 
+    color: white;
+}
