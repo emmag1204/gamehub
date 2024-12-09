@@ -25,7 +25,7 @@ This app allows users to view, add, and organize games by category.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/gamehub.git
+   git clone https://github.com/emmag1204/gamehub.git
    cd gamehub
  2. Create a Virtual Environment:
 A virtual environment helps manage dependencies without conflicting with other projects.
